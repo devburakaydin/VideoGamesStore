@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67019CE629733BC4001720AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67019CE529733BC4001720AD /* HomeViewController.swift */; };
+		67019CEA29733C06001720AD /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67019CE929733C06001720AD /* FavoriteViewController.swift */; };
 		67E0CE1D297337AF00205C81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE1C297337AF00205C81 /* AppDelegate.swift */; };
 		67E0CE1F297337AF00205C81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE1E297337AF00205C81 /* SceneDelegate.swift */; };
-		67E0CE21297337AF00205C81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE20297337AF00205C81 /* ViewController.swift */; };
-		67E0CE24297337AF00205C81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E0CE22297337AF00205C81 /* Main.storyboard */; };
+		67E0CE21297337AF00205C81 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE20297337AF00205C81 /* MainTabBarViewController.swift */; };
 		67E0CE27297337AF00205C81 /* VideoGamesStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE25297337AF00205C81 /* VideoGamesStore.xcdatamodeld */; };
 		67E0CE29297337B000205C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E0CE28297337B000205C81 /* Assets.xcassets */; };
 		67E0CE2C297337B000205C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E0CE2A297337B000205C81 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67019CE529733BC4001720AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		67019CE929733C06001720AD /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		67E0CE19297337AF00205C81 /* VideoGamesStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoGamesStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E0CE1C297337AF00205C81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67E0CE1E297337AF00205C81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		67E0CE20297337AF00205C81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		67E0CE23297337AF00205C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		67E0CE20297337AF00205C81 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		67E0CE26297337AF00205C81 /* VideoGamesStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoGamesStore.xcdatamodel; sourceTree = "<group>"; };
 		67E0CE28297337B000205C81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67E0CE2B297337B000205C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +41,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67019CE429733B9E001720AD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				67E0CE20297337AF00205C81 /* MainTabBarViewController.swift */,
+				67019CE729733BCC001720AD /* Home */,
+				67019CE829733BED001720AD /* Favorite */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		67019CE729733BCC001720AD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				67019CE529733BC4001720AD /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		67019CE829733BED001720AD /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				67019CE929733C06001720AD /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		67E0CE10297337AF00205C81 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +86,9 @@
 		67E0CE1B297337AF00205C81 /* VideoGamesStore */ = {
 			isa = PBXGroup;
 			children = (
+				67019CE429733B9E001720AD /* Modules */,
 				67E0CE1C297337AF00205C81 /* AppDelegate.swift */,
 				67E0CE1E297337AF00205C81 /* SceneDelegate.swift */,
-				67E0CE20297337AF00205C81 /* ViewController.swift */,
-				67E0CE22297337AF00205C81 /* Main.storyboard */,
 				67E0CE28297337B000205C81 /* Assets.xcassets */,
 				67E0CE2A297337B000205C81 /* LaunchScreen.storyboard */,
 				67E0CE2D297337B000205C81 /* Info.plist */,
@@ -130,7 +157,6 @@
 			files = (
 				67E0CE2C297337B000205C81 /* LaunchScreen.storyboard in Resources */,
 				67E0CE29297337B000205C81 /* Assets.xcassets in Resources */,
-				67E0CE24297337AF00205C81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67E0CE21297337AF00205C81 /* ViewController.swift in Sources */,
+				67019CE629733BC4001720AD /* HomeViewController.swift in Sources */,
+				67E0CE21297337AF00205C81 /* MainTabBarViewController.swift in Sources */,
 				67E0CE27297337AF00205C81 /* VideoGamesStore.xcdatamodeld in Sources */,
 				67E0CE1D297337AF00205C81 /* AppDelegate.swift in Sources */,
+				67019CEA29733C06001720AD /* FavoriteViewController.swift in Sources */,
 				67E0CE1F297337AF00205C81 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +179,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		67E0CE22297337AF00205C81 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				67E0CE23297337AF00205C81 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		67E0CE2A297337B000205C81 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +316,6 @@
 				INFOPLIST_FILE = VideoGamesStore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +343,6 @@
 				INFOPLIST_FILE = VideoGamesStore/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

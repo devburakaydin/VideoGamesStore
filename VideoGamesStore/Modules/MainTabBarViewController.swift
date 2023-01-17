@@ -17,13 +17,14 @@ class MainTabBarViewController: UITabBarController {
         let favorite = UINavigationController(rootViewController: FavoriteViewController())
         
         home.tabBarItem.image = UIImage(systemName: "house")
-        favorite.tabBarItem.image = UIImage(systemName: "play.circle")
+        favorite.tabBarItem.image = UIImage(systemName: "heart")
         
         home.title = "Home"
-        favorite.title = "Coming Soon"
+        favorite.title = "Favorites"
         
-        tabBar.tintColor = .label
-//        tabBar.isTranslucent = true
+        tabBar.barTintColor = UIColorConstants.creamColor
+        tabBar.tintColor = UIColorConstants.redColor
+        tabBar.unselectedItemTintColor = UIColorConstants.lightRedColor
         
         setViewControllers([home, favorite], animated: true)
     }

@@ -68,6 +68,8 @@ class VideoGameCollectionViewCell: UICollectionViewCell {
     }
     
     public func configure(with model: VideoGame) {
+        guard model.backgroundImage != nil else { return }
+        
         guard let url = URL(string: "\(model.backgroundImage!)") else {return}
         titleLabel.text = model.name ?? ""
         posterUIImageView.kf.setImage(with: url)

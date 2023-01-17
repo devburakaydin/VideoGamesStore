@@ -21,14 +21,7 @@ class HomeModel {
     
     private var page: Int = 1
     
-    private var state: Bool = false
-    
     func fetchVideoGames() {
-        if(state) {
-            state = true
-            return
-        }
-        
         self.page += 1
       if InternetManager.shared.isInternetActive() {
           AF.request(APIConstants.games(page: page)).responseDecodable(of: VideoGamesResponse.self) { (res) in

@@ -12,7 +12,7 @@
 		67027A9529734571006C2273 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 67027A9429734571006C2273 /* Alamofire */; };
 		67027A9729734592006C2273 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027A9629734592006C2273 /* HomeViewModel.swift */; };
 		67027A99297345B2006C2273 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027A98297345B2006C2273 /* HomeModel.swift */; };
-		67027A9C29734777006C2273 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027A9B29734777006C2273 /* APIConstants.swift */; };
+		67027A9C29734777006C2273 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027A9B29734777006C2273 /* Constants.swift */; };
 		67027A9F29734A6F006C2273 /* VideoGamesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027A9E29734A6F006C2273 /* VideoGamesResponse.swift */; };
 		67027AA229734CC8006C2273 /* InternetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027AA129734CC8006C2273 /* InternetManager.swift */; };
 		673CDC452975A84E00F3B7DA /* VideoGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CDC442975A84E00F3B7DA /* VideoGameCollectionViewCell.swift */; };
@@ -23,6 +23,11 @@
 		67E0CE27297337AF00205C81 /* VideoGamesStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE25297337AF00205C81 /* VideoGamesStore.xcdatamodeld */; };
 		67E0CE29297337B000205C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E0CE28297337B000205C81 /* Assets.xcassets */; };
 		67E0CE2C297337B000205C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E0CE2A297337B000205C81 /* LaunchScreen.storyboard */; };
+		67F8588529770F990036FF9D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F8588429770F990036FF9D /* SearchViewController.swift */; };
+		67F85887297711F60036FF9D /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F85886297711F60036FF9D /* SearchResultsViewController.swift */; };
+		67F85889297714880036FF9D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F85888297714880036FF9D /* SearchViewModel.swift */; };
+		67F8588B297714B80036FF9D /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F8588A297714B80036FF9D /* SearchModel.swift */; };
+		67F8588E29772EAA0036FF9D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F8588D29772EAA0036FF9D /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +35,7 @@
 		67019CE929733C06001720AD /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		67027A9629734592006C2273 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		67027A98297345B2006C2273 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
-		67027A9B29734777006C2273 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		67027A9B29734777006C2273 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		67027A9E29734A6F006C2273 /* VideoGamesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGamesResponse.swift; sourceTree = "<group>"; };
 		67027AA129734CC8006C2273 /* InternetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetManager.swift; sourceTree = "<group>"; };
 		673CDC442975A84E00F3B7DA /* VideoGameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -42,6 +47,11 @@
 		67E0CE28297337B000205C81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67E0CE2B297337B000205C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67E0CE2D297337B000205C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67F8588429770F990036FF9D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		67F85886297711F60036FF9D /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		67F85888297714880036FF9D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		67F8588A297714B80036FF9D /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		67F8588D29772EAA0036FF9D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +70,11 @@
 		67019CE429733B9E001720AD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				67E0CE20297337AF00205C81 /* MainTabBarViewController.swift */,
 				67019CE729733BCC001720AD /* Home */,
+				67F8588C29772E940036FF9D /* Detail */,
 				67019CE829733BED001720AD /* Favorite */,
+				67F8588329770F480036FF9D /* Search */,
+				67E0CE20297337AF00205C81 /* MainTabBarViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -88,7 +100,7 @@
 		67027A9A29734704006C2273 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				67027A9B29734777006C2273 /* APIConstants.swift */,
+				67027A9B29734777006C2273 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -109,12 +121,12 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		673CDC432975A81D00F3B7DA /* View */ = {
+		673CDC432975A81D00F3B7DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				673CDC442975A84E00F3B7DA /* VideoGameCollectionViewCell.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		67E0CE10297337AF00205C81 = {
@@ -140,7 +152,7 @@
 				67027A9D29734A4A006C2273 /* Models */,
 				67027A9A29734704006C2273 /* Utilities */,
 				67019CE429733B9E001720AD /* Modules */,
-				673CDC432975A81D00F3B7DA /* View */,
+				673CDC432975A81D00F3B7DA /* Views */,
 				67E0CE1C297337AF00205C81 /* AppDelegate.swift */,
 				67E0CE1E297337AF00205C81 /* SceneDelegate.swift */,
 				67E0CE28297337B000205C81 /* Assets.xcassets */,
@@ -149,6 +161,25 @@
 				67E0CE25297337AF00205C81 /* VideoGamesStore.xcdatamodeld */,
 			);
 			path = VideoGamesStore;
+			sourceTree = "<group>";
+		};
+		67F8588329770F480036FF9D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				67F8588429770F990036FF9D /* SearchViewController.swift */,
+				67F85886297711F60036FF9D /* SearchResultsViewController.swift */,
+				67F85888297714880036FF9D /* SearchViewModel.swift */,
+				67F8588A297714B80036FF9D /* SearchModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		67F8588C29772E940036FF9D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				67F8588D29772EAA0036FF9D /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,13 +261,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				673CDC452975A84E00F3B7DA /* VideoGameCollectionViewCell.swift in Sources */,
+				67F8588E29772EAA0036FF9D /* DetailViewController.swift in Sources */,
 				67019CE629733BC4001720AD /* HomeViewController.swift in Sources */,
 				67E0CE21297337AF00205C81 /* MainTabBarViewController.swift in Sources */,
+				67F8588B297714B80036FF9D /* SearchModel.swift in Sources */,
 				67027A9729734592006C2273 /* HomeViewModel.swift in Sources */,
 				67E0CE27297337AF00205C81 /* VideoGamesStore.xcdatamodeld in Sources */,
+				67F85887297711F60036FF9D /* SearchResultsViewController.swift in Sources */,
+				67F85889297714880036FF9D /* SearchViewModel.swift in Sources */,
 				67027A99297345B2006C2273 /* HomeModel.swift in Sources */,
 				67027AA229734CC8006C2273 /* InternetManager.swift in Sources */,
-				67027A9C29734777006C2273 /* APIConstants.swift in Sources */,
+				67027A9C29734777006C2273 /* Constants.swift in Sources */,
+				67F8588529770F990036FF9D /* SearchViewController.swift in Sources */,
 				67027A9F29734A6F006C2273 /* VideoGamesResponse.swift in Sources */,
 				67E0CE1D297337AF00205C81 /* AppDelegate.swift in Sources */,
 				67019CEA29733C06001720AD /* FavoriteViewController.swift in Sources */,

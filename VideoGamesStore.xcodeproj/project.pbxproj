@@ -16,7 +16,7 @@
 		67027A9F29734A6F006C2273 /* VideoGamesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027A9E29734A6F006C2273 /* VideoGamesResponse.swift */; };
 		67027AA229734CC8006C2273 /* InternetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027AA129734CC8006C2273 /* InternetManager.swift */; };
 		673CDC452975A84E00F3B7DA /* VideoGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CDC442975A84E00F3B7DA /* VideoGameCollectionViewCell.swift */; };
-		673CDC482975CB1E00F3B7DA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 673CDC472975CB1E00F3B7DA /* Kingfisher */; };
+		67776C5729770DB10080B523 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 67776C5629770DB10080B523 /* Kingfisher */; };
 		67E0CE1D297337AF00205C81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE1C297337AF00205C81 /* AppDelegate.swift */; };
 		67E0CE1F297337AF00205C81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE1E297337AF00205C81 /* SceneDelegate.swift */; };
 		67E0CE21297337AF00205C81 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE20297337AF00205C81 /* MainTabBarViewController.swift */; };
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				673CDC482975CB1E00F3B7DA /* Kingfisher in Frameworks */,
+				67776C5729770DB10080B523 /* Kingfisher in Frameworks */,
 				67027A9529734571006C2273 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,7 +169,7 @@
 			name = VideoGamesStore;
 			packageProductDependencies = (
 				67027A9429734571006C2273 /* Alamofire */,
-				673CDC472975CB1E00F3B7DA /* Kingfisher */,
+				67776C5629770DB10080B523 /* Kingfisher */,
 			);
 			productName = VideoGamesStore;
 			productReference = 67E0CE19297337AF00205C81 /* VideoGamesStore.app */;
@@ -201,7 +201,7 @@
 			mainGroup = 67E0CE10297337AF00205C81;
 			packageReferences = (
 				67027A9329734571006C2273 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				673CDC462975CB1E00F3B7DA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				67776C5529770DB10080B523 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 67E0CE1A297337AF00205C81 /* Products */;
 			projectDirPath = "";
@@ -458,12 +458,12 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		673CDC462975CB1E00F3B7DA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		67776C5529770DB10080B523 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = exactVersion;
+				version = 7.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -474,9 +474,9 @@
 			package = 67027A9329734571006C2273 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		673CDC472975CB1E00F3B7DA /* Kingfisher */ = {
+		67776C5629770DB10080B523 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 673CDC462975CB1E00F3B7DA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 67776C5529770DB10080B523 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

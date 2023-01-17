@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		67019CE629733BC4001720AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67019CE529733BC4001720AD /* HomeViewController.swift */; };
 		67019CEA29733C06001720AD /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67019CE929733C06001720AD /* FavoriteViewController.swift */; };
+		67027A9529734571006C2273 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 67027A9429734571006C2273 /* Alamofire */; };
+		67027A9729734592006C2273 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027A9629734592006C2273 /* HomeViewModel.swift */; };
+		67027A99297345B2006C2273 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027A98297345B2006C2273 /* HomeModel.swift */; };
+		67027A9C29734777006C2273 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027A9B29734777006C2273 /* APIConstants.swift */; };
+		67027A9F29734A6F006C2273 /* VideoGamesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027A9E29734A6F006C2273 /* VideoGamesResponse.swift */; };
+		67027AA229734CC8006C2273 /* InternetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67027AA129734CC8006C2273 /* InternetManager.swift */; };
+		673CDC452975A84E00F3B7DA /* VideoGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CDC442975A84E00F3B7DA /* VideoGameCollectionViewCell.swift */; };
+		673CDC482975CB1E00F3B7DA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 673CDC472975CB1E00F3B7DA /* Kingfisher */; };
 		67E0CE1D297337AF00205C81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE1C297337AF00205C81 /* AppDelegate.swift */; };
 		67E0CE1F297337AF00205C81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE1E297337AF00205C81 /* SceneDelegate.swift */; };
 		67E0CE21297337AF00205C81 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0CE20297337AF00205C81 /* MainTabBarViewController.swift */; };
@@ -20,6 +28,12 @@
 /* Begin PBXFileReference section */
 		67019CE529733BC4001720AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		67019CE929733C06001720AD /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		67027A9629734592006C2273 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		67027A98297345B2006C2273 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		67027A9B29734777006C2273 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		67027A9E29734A6F006C2273 /* VideoGamesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGamesResponse.swift; sourceTree = "<group>"; };
+		67027AA129734CC8006C2273 /* InternetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetManager.swift; sourceTree = "<group>"; };
+		673CDC442975A84E00F3B7DA /* VideoGameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameCollectionViewCell.swift; sourceTree = "<group>"; };
 		67E0CE19297337AF00205C81 /* VideoGamesStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoGamesStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E0CE1C297337AF00205C81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67E0CE1E297337AF00205C81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673CDC482975CB1E00F3B7DA /* Kingfisher in Frameworks */,
+				67027A9529734571006C2273 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				67019CE529733BC4001720AD /* HomeViewController.swift */,
+				67027A9629734592006C2273 /* HomeViewModel.swift */,
+				67027A98297345B2006C2273 /* HomeModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -65,6 +83,38 @@
 				67019CE929733C06001720AD /* FavoriteViewController.swift */,
 			);
 			path = Favorite;
+			sourceTree = "<group>";
+		};
+		67027A9A29734704006C2273 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				67027A9B29734777006C2273 /* APIConstants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		67027A9D29734A4A006C2273 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67027A9E29734A6F006C2273 /* VideoGamesResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		67027AA029734CAE006C2273 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				67027AA129734CC8006C2273 /* InternetManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		673CDC432975A81D00F3B7DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				673CDC442975A84E00F3B7DA /* VideoGameCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		67E0CE10297337AF00205C81 = {
@@ -86,7 +136,11 @@
 		67E0CE1B297337AF00205C81 /* VideoGamesStore */ = {
 			isa = PBXGroup;
 			children = (
+				67027AA029734CAE006C2273 /* Managers */,
+				67027A9D29734A4A006C2273 /* Models */,
+				67027A9A29734704006C2273 /* Utilities */,
 				67019CE429733B9E001720AD /* Modules */,
+				673CDC432975A81D00F3B7DA /* View */,
 				67E0CE1C297337AF00205C81 /* AppDelegate.swift */,
 				67E0CE1E297337AF00205C81 /* SceneDelegate.swift */,
 				67E0CE28297337B000205C81 /* Assets.xcassets */,
@@ -113,6 +167,10 @@
 			dependencies = (
 			);
 			name = VideoGamesStore;
+			packageProductDependencies = (
+				67027A9429734571006C2273 /* Alamofire */,
+				673CDC472975CB1E00F3B7DA /* Kingfisher */,
+			);
 			productName = VideoGamesStore;
 			productReference = 67E0CE19297337AF00205C81 /* VideoGamesStore.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +199,10 @@
 				Base,
 			);
 			mainGroup = 67E0CE10297337AF00205C81;
+			packageReferences = (
+				67027A9329734571006C2273 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				673CDC462975CB1E00F3B7DA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 67E0CE1A297337AF00205C81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,9 +229,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				673CDC452975A84E00F3B7DA /* VideoGameCollectionViewCell.swift in Sources */,
 				67019CE629733BC4001720AD /* HomeViewController.swift in Sources */,
 				67E0CE21297337AF00205C81 /* MainTabBarViewController.swift in Sources */,
+				67027A9729734592006C2273 /* HomeViewModel.swift in Sources */,
 				67E0CE27297337AF00205C81 /* VideoGamesStore.xcdatamodeld in Sources */,
+				67027A99297345B2006C2273 /* HomeModel.swift in Sources */,
+				67027AA229734CC8006C2273 /* InternetManager.swift in Sources */,
+				67027A9C29734777006C2273 /* APIConstants.swift in Sources */,
+				67027A9F29734A6F006C2273 /* VideoGamesResponse.swift in Sources */,
 				67E0CE1D297337AF00205C81 /* AppDelegate.swift in Sources */,
 				67019CEA29733C06001720AD /* FavoriteViewController.swift in Sources */,
 				67E0CE1F297337AF00205C81 /* SceneDelegate.swift in Sources */,
@@ -380,6 +448,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		67027A9329734571006C2273 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		673CDC462975CB1E00F3B7DA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		67027A9429734571006C2273 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67027A9329734571006C2273 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		673CDC472975CB1E00F3B7DA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 673CDC462975CB1E00F3B7DA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		67E0CE25297337AF00205C81 /* VideoGamesStore.xcdatamodeld */ = {

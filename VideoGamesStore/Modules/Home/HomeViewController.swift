@@ -85,6 +85,14 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            let vc = DetailViewController()
+            vc.configure(videoGame: self.viewModel.videoGames[indexPath.item])
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
             let ofsetY = scrollView.contentOffset.y
             let contentHeight = scrollView.contentSize.height

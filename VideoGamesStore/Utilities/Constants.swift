@@ -15,6 +15,10 @@ class APIConstants {
     static func games(page: Int) -> String {
         "https://api.rawg.io/api/games?key=\(API_KEY)&page=\(page)"
         }
+    
+    static func search(query: String) -> String {
+        "https://api.rawg.io/api/games?key=\(API_KEY)&search=\(query)"
+        }
 }
 
 class UIColorConstants {

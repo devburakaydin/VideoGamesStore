@@ -59,7 +59,7 @@ class DetailViewController: UIViewController {
     
     private let notesButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Notlar", for: .normal)
+        button.setTitle(LocalizationHelper.notes.localized, for: .normal)
         button.layer.borderColor = UIColor.white.cgColor
         button.backgroundColor = UIColorConstants.redColor
         button.layer.borderWidth = 1

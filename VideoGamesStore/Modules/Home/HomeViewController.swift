@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
     
     func setupUI(){
         title = "Video Games Store"
-        navigationController?.title = "Home"
+        navigationController?.title = LocalizationHelper.home.localized
         navigationController?.navigationBar.barTintColor = UIColorConstants.creamColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColorConstants.redColor!]
         view.backgroundColor = UIColorConstants.lightCreamColor

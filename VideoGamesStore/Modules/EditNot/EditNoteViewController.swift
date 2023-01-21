@@ -22,7 +22,7 @@ class EditNoteViewController: UIViewController {
     
     private let addButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Add Note", for: .normal)
+        button.setTitle(LocalizationHelper.addNote.localized, for: .normal)
         button.layer.borderColor = UIColor.white.cgColor
         button.backgroundColor = UIColorConstants.redColor
         button.layer.borderWidth = 1
@@ -82,7 +82,7 @@ class EditNoteViewController: UIViewController {
     }
 
     func changeButtonName(){
-            self.addButton.setTitle(self.editNote != nil ?  "Edit" : "Add Note", for: .normal)
+        self.addButton.setTitle(self.editNote != nil ?  LocalizationHelper.edit.localized : LocalizationHelper.addNote.localized, for: .normal)
     }
     
     override func viewDidLayoutSubviews() {
@@ -116,8 +116,8 @@ class EditNoteViewController: UIViewController {
 
 extension EditNoteViewController: EditNoteViewModelDelegate {
     func showAlert() {
-        let alert = UIAlertController(title: "Warning", message: " Not Boş Veya 3 harften az olamaz", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Tamam", style: .cancel))
+        let alert = UIAlertController(title: LocalizationHelper.warning.localized, message: LocalizationHelper.noteCannotBeBlankOrLessThan3Letters.localized, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: LocalizationHelper.ok.localized, style: .cancel))
         present(alert, animated: true)
     }
     
@@ -138,7 +138,7 @@ extension EditNoteViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-            return "Notes"
+        return LocalizationHelper.notes.localized
         }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

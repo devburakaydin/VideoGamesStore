@@ -11,7 +11,7 @@ class SearchViewController: UIViewController {
     
     private let searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: SearchResultsViewController())
-        controller.searchBar.placeholder = "Search for a Video Games"
+        controller.searchBar.placeholder = LocalizationHelper.searchForAVideoGames.localized
         controller.searchBar.searchBarStyle = .minimal
         return controller
     }()
@@ -25,7 +25,7 @@ class SearchViewController: UIViewController {
     }
 
     func setupUI(){
-        title = "Search"
+        title = LocalizationHelper.search.localized
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColorConstants.redColor!]
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always

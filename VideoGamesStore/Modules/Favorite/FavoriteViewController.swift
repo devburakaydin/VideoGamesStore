@@ -25,7 +25,7 @@ class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColorConstants.creamColor
-        title = "Favorites"
+        title = LocalizationHelper.favorites.localized
         view.addSubview(favoriteTable)
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
@@ -87,7 +87,7 @@ extension FavoriteViewController: UICollectionViewDelegate, UICollectionViewData
         let config = UIContextMenuConfiguration(
                    identifier: nil,
                    previewProvider: nil) {[weak self] _ in
-                       let downloadAction = UIAction(title: "Delete", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
+                       let downloadAction = UIAction(title: LocalizationHelper.delete.localized, subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
                            self?.deleteFavorite(indexPath: indexPath)
                        }
                        return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])

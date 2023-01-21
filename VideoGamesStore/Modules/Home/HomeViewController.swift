@@ -22,14 +22,10 @@ class HomeViewController: UIViewController {
             return collectionView
         }()
     
-    @objc func pressedFilter(){
-        print("tıklandı")
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(videoGameCollectionView)
-        
         setupUI()
         viewModel.delegate = self
         videoGameCollectionView.delegate = self

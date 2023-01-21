@@ -21,9 +21,9 @@ class MainTabBarViewController: UITabBarController {
         search.tabBarItem.image = UIImage(systemName: "magnifyingglass")
         favorite.tabBarItem.image = UIImage(systemName: "heart")
         
-        home.title = "Home"
-        search.title = "Search"
-        favorite.title = "Favorites"
+        home.title = LocalizationHelper.home.localized
+        search.title = LocalizationHelper.search.localized
+        favorite.title = LocalizationHelper.favorites.localized
         
         tabBar.barTintColor = UIColorConstants.creamColor
         tabBar.tintColor = UIColorConstants.redColor

@@ -1,0 +1,19 @@
+/*
+  Localizable.strings
+  VideoGamesStore
+
+  Created by Burak on 21.01.2023.
+  
+*/
+
+"LocalizationHelper_notes" = "Notes";
+"LocalizationHelper_edit" = "Edit";
+"LocalizationHelper_addNote" = "Add Note";
+"LocalizationHelper_warning" = "Warning";
+"LocalizationHelper_noteCannotBeBlankOrLessThan3Letters" = "Note Cannot be blank or less than 3 letters";
+"LocalizationHelper_ok" = "Ok";
+"LocalizationHelper_home" = "Home";
+"LocalizationHelper_favorites" = "Favorites";
+"LocalizationHelper_search" = "Search";
+"LocalizationHelper_delete" = "Delete";
+"LocalizationHelper_searchForAVideoGames" = "Search for a Video Games";

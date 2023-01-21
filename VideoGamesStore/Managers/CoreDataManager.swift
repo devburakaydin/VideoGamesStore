@@ -151,5 +151,26 @@ class CoreDataManager {
         
     }
     
+    func update(note:String, newNote: String) -> Bool{
+               
+               guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
+               
+               let managedContext = appDelegate.persistentContainer.viewContext
+               
+               let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NoteItem")
+               let predicate = NSPredicate(format: "note = %@", note)
+               fetchRequest.predicate = predicate
+              
+               do{
+                   let foundTasks = try managedContext.fetch(fetchRequest) as! [NoteItem]
+                   foundTasks.first?.note = newNote
+                   try managedContext.save()
+                   return true
+               }catch{
+                       print("update error.")
+                   return false
+                   }
+               }
+    
     
 }

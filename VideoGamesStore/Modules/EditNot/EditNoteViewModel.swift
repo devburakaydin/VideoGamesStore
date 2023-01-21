@@ -9,6 +9,7 @@ import Foundation
 
 protocol EditNoteViewModelDelegate: AnyObject {
     func updateNoteList()
+    func showAlert()
 }
 
 class EditNoteViewModel {
@@ -30,8 +31,7 @@ class EditNoteViewModel {
     
     func addNote(note: String){
         if(note.count < 3 ){
-            //Todo: Add Warning
-            print("not boş veya 3 harften az olamaz")
+            self.delegate?.showAlert()
             return
         }
         model.addNote(gameId: gameId ?? 0, note: note)
@@ -40,9 +40,18 @@ class EditNoteViewModel {
     func deleteNote(row: Int){
         model.deleteNote(model: notes[row])
     }
+    
+    func updateNote(note:String, newNote: String){
+        model.updateNote(note: note, newNote: newNote)
+    }
+    
 }
 
 extension EditNoteViewModel: EditNoteModeldelegate {
+    func updateNote(state: Bool) {
+        getNotes()
+    }
+    
     func deleteNote() {
         getNotes()
     }

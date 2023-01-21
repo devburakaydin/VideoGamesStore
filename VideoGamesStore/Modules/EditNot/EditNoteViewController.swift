@@ -49,6 +49,8 @@ class EditNoteViewController: UIViewController {
     }()
     
     private let viewModel: EditNoteViewModel = EditNoteViewModel()
+    
+    var editNote: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +74,15 @@ class EditNoteViewController: UIViewController {
     }
     
     @objc func addNote(){
-        viewModel.addNote(note: textView.text)
+        if(editNote != nil){
+            viewModel.updateNote(note: editNote!, newNote: textView.text)
+        }else{
+            viewModel.addNote(note: textView.text)
+        }
+    }
+
+    func changeButtonName(){
+            self.addButton.setTitle(self.editNote != nil ?  "Edit" : "Add Note", for: .normal)
     }
     
     override func viewDidLayoutSubviews() {
@@ -105,9 +115,18 @@ class EditNoteViewController: UIViewController {
 }
 
 extension EditNoteViewController: EditNoteViewModelDelegate {
+    func showAlert() {
+        let alert = UIAlertController(title: "Warning", message: " Not Boş Veya 3 harften az olamaz", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Tamam", style: .cancel))
+        present(alert, animated: true)
+    }
+    
+   
     func updateNoteList() {
-        textView.text = ""
-        tableView.reloadData()
+            self.textView.text = ""
+            self.editNote = nil
+            changeButtonName()
+            self.tableView.reloadData()
     }
     
     
@@ -139,5 +158,10 @@ extension EditNoteViewController: UITableViewDelegate, UITableViewDataSource {
             return UISwipeActionsConfiguration(actions: [deleteAction])
         }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        editNote = viewModel.notes[indexPath.row].note
+        textView.text = editNote
+        changeButtonName()
+    }
     
 }

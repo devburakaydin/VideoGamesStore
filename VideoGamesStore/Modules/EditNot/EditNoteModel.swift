@@ -10,6 +10,7 @@ import Foundation
 protocol EditNoteModeldelegate: AnyObject {
     func updateNoteItems(noteItems: [NoteItem])
     func deleteNote()
+    func updateNote(state: Bool)
 }
 
 class EditNoteModel {
@@ -32,5 +33,10 @@ class EditNoteModel {
         CoreDataManager.shared.deleteNote(model: model) { state in
             self.delegate?.deleteNote()
         }
+    }
+    
+    func updateNote(note:String, newNote: String){
+        let state = CoreDataManager.shared.update(note: note, newNote: newNote)
+        self.delegate?.updateNote(state: state)
     }
 }

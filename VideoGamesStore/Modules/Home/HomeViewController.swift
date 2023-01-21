@@ -22,6 +22,11 @@ class HomeViewController: UIViewController {
             return collectionView
         }()
     
+    public let activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .large)
+            return indicator
+        }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +36,14 @@ class HomeViewController: UIViewController {
         videoGameCollectionView.delegate = self
         videoGameCollectionView.dataSource = self
         viewModel.didViewLoad()
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
         
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        activityIndicator.center = view.center
         videoGameCollectionView.frame = view.bounds
     }
     
@@ -64,6 +72,7 @@ extension HomeViewController: HomeViewModelDelegate {
     }
     
     func refreshVideoGames() {
+        self.activityIndicator.stopAnimating()
         self.videoGameCollectionView.reloadData()
     }
 }

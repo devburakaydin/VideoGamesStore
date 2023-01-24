@@ -17,8 +17,8 @@ class LocalPushNotificationManager {
         let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
-        content.title = "Burak"
-        content.body = "İlk Push Notification"
+        content.title = "Hey"
+        content.body = "Please come back"
         
         let date = Date().addingTimeInterval(5)
         

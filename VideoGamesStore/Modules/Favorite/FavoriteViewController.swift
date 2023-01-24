@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class FavoriteViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class FavoriteViewController: UIViewController {
         }()
     
     private let viewModel: FavoriteViewModel = FavoriteViewModel()
+    
+    private var animationView: LottieAnimationView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,7 @@ class FavoriteViewController: UIViewController {
         viewModel.delegate = self
         favoriteTable.delegate = self
         favoriteTable.dataSource = self
+        setupAnimation()
         getFavorites()
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name("favorite"), object: nil, queue: nil) { _ in
@@ -43,6 +47,16 @@ class FavoriteViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         favoriteTable.frame = view.bounds
+    }
+    
+    func setupAnimation(){
+        animationView = .init(name: "heart_animation")
+        animationView.frame = view.frame
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 1.0
+        view.addSubview(animationView)
+        animationView.play()
     }
     
     func getFavorites(){
@@ -101,6 +115,9 @@ extension FavoriteViewController: UICollectionViewDelegate, UICollectionViewData
 extension FavoriteViewController: FavoriteViewModelDelegate {
     func updateFavoriteList() {
         self.favoriteTable.reloadData()
+        if(animationView != nil){
+            animationView.isHidden = !viewModel.favorites.isEmpty
+        }
     }
     
     

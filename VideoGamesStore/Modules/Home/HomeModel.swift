@@ -15,11 +15,9 @@ protocol HomeModelProtocol : AnyObject{
 
 class HomeModel {
     
-    private(set) var videoGames: [VideoGame] = []
-    
     weak var delegate: HomeModelProtocol?
     
-    private var page: Int = 1
+    private var page: Int = 0
     
     func fetchVideoGames() {
         self.page += 1
@@ -30,8 +28,7 @@ class HomeModel {
             self.delegate?.didVideoGamesCouldntfetch()
             return
           }
-          self.videoGames.append(contentsOf: response.videoGames ?? [])
-          self.delegate?.didVideoGamesfetch(videoGames: self.videoGames)
+          self.delegate?.didVideoGamesfetch(videoGames: response.videoGames ?? [])
         }
       } else {
         ///Todo: Add Warning

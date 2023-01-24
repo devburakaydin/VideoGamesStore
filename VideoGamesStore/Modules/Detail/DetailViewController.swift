@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.backgroundColor = .blue
+        imageView.layer.cornerRadius = 15
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -22,6 +23,8 @@ class DetailViewController: UIViewController {
     private let titleLabel: UILabel = {
        let label = UILabel()
         label.text = "Deneme"
+        label.font = .boldSystemFont(ofSize: 25)
+        label.numberOfLines = 0
         label.textColor = UIColorConstants.redColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -44,6 +47,7 @@ class DetailViewController: UIViewController {
     private let ratingLabel: UILabel = {
        let label = UILabel()
         label.text = "Deneme"
+        label.font = .boldSystemFont(ofSize: 20)
         label.textColor = UIColorConstants.redColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -63,7 +67,7 @@ class DetailViewController: UIViewController {
         button.layer.borderColor = UIColor.white.cgColor
         button.backgroundColor = UIColorConstants.redColor
         button.layer.borderWidth = 1
-        button.layer.cornerRadius = 5
+        button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -77,9 +81,9 @@ class DetailViewController: UIViewController {
         setupUI()
         viewModel.delegate = self
         view.addSubview(gameImageView)
-        view.addSubview(ratingLabel)
-        view.addSubview(titleLabel)
-        view.addSubview(ratingIcon)
+        gameImageView.addSubview(ratingLabel)
+        gameImageView.addSubview(titleLabel)
+        gameImageView.addSubview(ratingIcon)
         view.addSubview(releasedLabel)
         view.addSubview(sugLabel)
         view.addSubview(notesButton)
@@ -89,7 +93,11 @@ class DetailViewController: UIViewController {
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(didSelectFavoriteIcon))
-        navigationItem.rightBarButtonItem?.tintColor = .red
+        
+        navigationItem.rightBarButtonItem?.tintColor = UIColorConstants.redColor
+        navigationItem.backBarButtonItem?.tintColor = UIColorConstants.redColor
+        navigationController?.tabBarItem.badgeColor = .red
+        navigationItem.backButtonTitle = "AAAa"
         
         applyConstraints()
         viewModel.favoriteControl()
@@ -109,26 +117,26 @@ class DetailViewController: UIViewController {
     
     func setupUI(){
         view.backgroundColor = UIColorConstants.creamColor
+        navigationItem.leftBarButtonItem?.tintColor = UIColorConstants.redColor
     }
     
     private func applyConstraints(){
         let gameImageViewContraints = [
-            gameImageView.topAnchor.constraint(equalTo: view.topAnchor),
-            gameImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            gameImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            gameImageView.heightAnchor.constraint(equalToConstant: 400)
+            gameImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            gameImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20),
+            gameImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20),
+            gameImageView.heightAnchor.constraint(equalToConstant: view.safeAreaLayoutGuide.layoutFrame.height/2)
         ]
         NSLayoutConstraint.activate(gameImageViewContraints)
         
         let ratingLabelContraints = [
-            ratingLabel.topAnchor.constraint(equalTo: gameImageView.bottomAnchor, constant: 20),
-            ratingLabel.widthAnchor.constraint(equalToConstant: 40),
-            ratingLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            ratingLabel.topAnchor.constraint(equalTo: gameImageView.topAnchor, constant: 20),
+            ratingLabel.trailingAnchor.constraint(equalTo: gameImageView.trailingAnchor, constant: -20),
         ]
         NSLayoutConstraint.activate(ratingLabelContraints)
 
         let ratingIconContraints = [
-            ratingIcon.topAnchor.constraint(equalTo: gameImageView.bottomAnchor, constant: 15),
+            ratingIcon.topAnchor.constraint(equalTo: gameImageView.topAnchor, constant: 15),
             ratingIcon.trailingAnchor.constraint(equalTo: ratingLabel.leadingAnchor,constant: -5),
             ratingIcon.heightAnchor.constraint(equalToConstant: 30),
             ratingIcon.widthAnchor.constraint(equalToConstant: 30),
@@ -136,28 +144,26 @@ class DetailViewController: UIViewController {
         NSLayoutConstraint.activate(ratingIconContraints)
 
         let titleLabelContraints = [
-            titleLabel.topAnchor.constraint(equalTo: gameImageView.bottomAnchor, constant: 20),
-            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20),
-            titleLabel.trailingAnchor.constraint(equalTo: ratingIcon.trailingAnchor, constant: -20),
+            titleLabel.bottomAnchor.constraint(equalTo: gameImageView.bottomAnchor, constant: -20),
+            titleLabel.leadingAnchor.constraint(equalTo: gameImageView.leadingAnchor,constant: 20),
+            titleLabel.trailingAnchor.constraint(equalTo: gameImageView.trailingAnchor, constant: -20),
         ]
         NSLayoutConstraint.activate(titleLabelContraints)
-        
+
         let releasedLabelContraints = [
-            releasedLabel.topAnchor.constraint(equalTo: ratingIcon.bottomAnchor, constant: 20),
-            releasedLabel.widthAnchor.constraint(equalToConstant: 200),
-            releasedLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            releasedLabel.topAnchor.constraint(equalTo: gameImageView.bottomAnchor, constant: 20),
+            releasedLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
         ]
         NSLayoutConstraint.activate(releasedLabelContraints)
-        
+
         let sugLabelContraints = [
-            sugLabel.topAnchor.constraint(equalTo: ratingIcon.bottomAnchor, constant: 20),
-            sugLabel.trailingAnchor.constraint(equalTo: releasedLabel.leadingAnchor, constant: -20),
-            sugLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            sugLabel.topAnchor.constraint(equalTo: releasedLabel.bottomAnchor, constant: 20),
+            sugLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
         ]
         NSLayoutConstraint.activate(sugLabelContraints)
-        
+
         let notesButtonContraints = [
-            notesButton.topAnchor.constraint(equalTo: releasedLabel.bottomAnchor, constant: 50),
+            notesButton.topAnchor.constraint(equalTo: sugLabel.bottomAnchor, constant: 50),
             notesButton.widthAnchor.constraint(equalToConstant: 100),
             notesButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ]
@@ -168,7 +174,7 @@ class DetailViewController: UIViewController {
         self.viewModel.videoGame = videoGame
         titleLabel.text = videoGame.name ?? "Empty Data"
         ratingLabel.text = String(videoGame.rating ?? 0.0)
-        releasedLabel.text = "Released \(videoGame.released ?? "Empty Data")"
+        releasedLabel.text = "Released: \(videoGame.released ?? "Empty Data")"
         sugLabel.text = "Suggestions: \(videoGame.suggestionsCount ?? 0)"
         
         guard let url = videoGame.backgroundImage else { return }

@@ -35,6 +35,8 @@ class SearchResultsViewController: UIViewController {
         
         searchCollectionView.delegate = self
         searchCollectionView.dataSource = self
+        
+        navigationItem.rightBarButtonItem?.tintColor = UIColorConstants.redColor
     }
     
     override func viewDidLayoutSubviews() {

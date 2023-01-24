@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  VideoGamesStore
+
+  Created by Burak on 21.01.2023.
+  
+*/
+
+"LocalizationHelper_notes" = "Notlar";
+"LocalizationHelper_edit" = "Düzenle";
+"LocalizationHelper_addNote" = "Not ekle";
+"LocalizationHelper_warning" = "Uyarı!";
+"LocalizationHelper_noteCannotBeBlankOrLessThan3Letters" = "Not Boş Veya 3 harften az olamaz";
+"LocalizationHelper_ok" = "Tamam";
+"LocalizationHelper_home" = "Ana Sayfa";
+"LocalizationHelper_favorites" = "Favoriler";
+"LocalizationHelper_search" = "Arama";
+"LocalizationHelper_delete" = "Sil";
+"LocalizationHelper_searchForAVideoGames" = "Video Oyun Ara";

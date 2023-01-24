@@ -28,6 +28,7 @@ class HomeViewModel {
     
     func didViewLoad() {
         model.fetchVideoGames()
+        LocalPushNotificationManager.shared.createPushNotification()
     }
     
     func changeFilter(){
@@ -42,7 +43,7 @@ class HomeViewModel {
 
 extension HomeViewModel: HomeModelProtocol{
     func didVideoGamesfetch(videoGames: [VideoGame]) {
-        self.videoGames.append(contentsOf: videoGames)
+        self.videoGames = self.videoGames + videoGames
         self.delegate?.refreshVideoGames()
     }
     

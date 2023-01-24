@@ -59,6 +59,8 @@ class HomeViewController: UIViewController {
                                                             target: self,
                                                             action: #selector(onTap)
         )
+        
+        navigationItem.rightBarButtonItem?.tintColor = UIColorConstants.redColor
     }
     @objc private func onTap(){
         viewModel.changeFilter()

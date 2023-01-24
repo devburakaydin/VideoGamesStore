@@ -27,7 +27,7 @@ class MainTabBarViewController: UITabBarController {
         
         tabBar.barTintColor = UIColorConstants.creamColor
         tabBar.tintColor = UIColorConstants.redColor
-        tabBar.unselectedItemTintColor = UIColorConstants.lightRedColor
+        tabBar.unselectedItemTintColor = UIColorConstants.lightRedColor?.withAlphaComponent(0.6)
         
         setViewControllers([home, search, favorite], animated: true)
         

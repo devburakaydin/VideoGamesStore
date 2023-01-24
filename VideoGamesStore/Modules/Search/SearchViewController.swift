@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class SearchViewController: UIViewController {
     
@@ -16,11 +17,14 @@ class SearchViewController: UIViewController {
         return controller
     }()
     
+    private var animationView: LottieAnimationView!
+    
     private let viewModel: SearchViewModel = SearchViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupAnimation()
         viewModel.delegate = self
     }
 
@@ -31,6 +35,17 @@ class SearchViewController: UIViewController {
         navigationController?.navigationItem.largeTitleDisplayMode = .always
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
+        searchController.searchBar.tintColor = UIColorConstants.redColor
+    }
+    
+    func setupAnimation(){
+        animationView = .init(name: "search_animation")
+        animationView.frame = view.frame
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 1.0
+        view.addSubview(animationView)
+        animationView.play()
     }
 }
 

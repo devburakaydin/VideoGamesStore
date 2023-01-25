@@ -13,6 +13,9 @@
 - Localization
 - MVVM
 
+### - İngilizce ve Türkçe Dil destegi var- 
+<br>
+
 ## Home And Local Push Notification 
 
 Oyunlar Pagination ile Listeleniyor <br>
